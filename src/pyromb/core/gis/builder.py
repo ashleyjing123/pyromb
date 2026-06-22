@@ -17,7 +17,7 @@ class Builder:
     The objects returned from the Builder are to be passed to the Catcment. 
     """
 
-    def _qgis_error(self, layer_name: str, message: str, fix: str, feature: str | None = None) -> ValueError:
+    def _qgis_error(self, layer_name: str, message: str, fix: str, feature: str = None) -> ValueError:
         location = f"{layer_name}"
         if feature:
             location = f"{location}, {feature}"
